@@ -1,0 +1,21 @@
+@use "../../../../imports" as *;
+
+.globalHeader {
+  width: 100%;
+  max-width: $globalMaxWidth;
+  margin: 0 auto;
+  padding: $globalPadding;
+  .mainLogo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .globalHeader {
+    .mainLogo {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
