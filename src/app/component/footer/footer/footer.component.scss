@@ -2,7 +2,6 @@
 
 .globalFooter {
   width: 100%;
-  max-width: $globalMaxWidth;
   padding: $globalPadding;
   position: fixed;
   bottom: 0;
@@ -11,8 +10,12 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    max-width: $globalMaxWidth;
+    margin: 0 auto;
+    gap: 1rem;
     .listContainer {
       display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
       color: $grayColor;
       font-size: $link;
