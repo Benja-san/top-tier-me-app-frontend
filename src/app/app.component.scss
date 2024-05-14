@@ -1,0 +1,7 @@
+@use "../imports" as *;
+
+.globalMain {
+  max-width: $globalMaxWidth;
+  margin: 0 auto;
+  padding: 2rem;
+}
