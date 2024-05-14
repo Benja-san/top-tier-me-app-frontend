@@ -1,0 +1,17 @@
+<footer class="globalFooter">
+  <nav class="footerNav">
+    <ul class="listContainer links">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Buy me a coffee</a></li>
+    </ul>
+    <ul class="listContainer networks">
+      @for(network of networks; track network.id) {
+      <li>
+        <a target="_blank" href="{{ network.url }}">
+          <img [src]="network.picture" [alt]="network.title" />
+        </a>
+      </li>
+      }
+    </ul>
+  </nav>
+</footer>
