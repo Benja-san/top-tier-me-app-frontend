@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './tierlist.component.html',
-  styleUrl: './tierlist.component.scss'
+  styleUrl: './tierlist.component.scss',
 })
 export class TierlistComponent {
-
+  title: string = 'Vos meilleurs pinguins';
 }

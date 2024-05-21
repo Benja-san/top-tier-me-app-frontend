@@ -1,0 +1,48 @@
+@use "../../../imports" as *;
+
+.headSection {
+  margin-bottom: 2rem;
+}
+
+.shelveSection {
+  border-bottom: 2px solid $tertiaryColor;
+  .shelveContainer {
+    border-radius: 4px;
+    .shelve {
+      .raw {
+        height: calc($rawHeight - $rawBorderHeight);
+        border-bottom: $rawBorderHeight solid $rawColor1;
+        .labelContainer {
+          width: $rawHeight;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          background-color: $rawColor1;
+          .title {
+            font-size: $mediumTitle;
+            color: $lightColor;
+          }
+          .options {
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            width: $optionsSize;
+            height: $optionsSize;
+            img {
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tabletMinWidth) {
+  .section {
+    @include sectionBehavior;
+  }
+}

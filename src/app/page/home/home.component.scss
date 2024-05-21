@@ -1,9 +1,7 @@
 @use "../../../imports" as *;
 
 .presentation {
-  width: 300px;
-  max-width: 100%;
-  margin: 0 auto;
+  @include sectionBehavior;
   .headTitle {
     text-align: center;
     font-size: $bigtitle;
