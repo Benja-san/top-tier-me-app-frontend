@@ -30,6 +30,8 @@ $rawHeight: 70px;
 $rawBorderHeight: 2px;
 $optionsSize: 10px;
 
+$transitionDuration: 0.3s;
+
 @mixin sectionBehavior {
   width: $sectionWidth;
   max-width: 100%;

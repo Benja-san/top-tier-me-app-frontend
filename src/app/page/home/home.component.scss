@@ -23,7 +23,7 @@
     padding: 1rem 3rem;
     text-align: center;
     border-radius: 25px;
-    transition: background-color 0.3s;
+    transition: background-color $transitionDuration;
   }
 }
 
