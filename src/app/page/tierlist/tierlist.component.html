@@ -1,1 +1,13 @@
-<p>tierlist works!</p>
+<section class="section headSection">
+  <h1 class="title">{{ title }}</h1>
+</section>
+
+<section class="section shelveSection">
+  <div class="shelveContainer">
+    <ul class="shelve">
+      @for(raw of raws; track raw) {
+      <app-raw [title]="raw.title"></app-raw>
+      }
+    </ul>
+  </div>
+</section>

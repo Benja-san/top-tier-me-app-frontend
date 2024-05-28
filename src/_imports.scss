@@ -21,3 +21,17 @@ $regularTitle: 1rem;
 $subTitle: 12px;
 $link: 14px;
 $cta: 28px;
+
+$tabletMinWidth: 768px;
+
+$sectionWidth: 300px;
+
+$rawHeight: 70px;
+$rawBorderHeight: 2px;
+$optionsSize: 10px;
+
+@mixin sectionBehavior {
+  width: $sectionWidth;
+  max-width: 100%;
+  margin: 0 auto;
+}

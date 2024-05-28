@@ -1,0 +1,21 @@
+@use "../../../imports" as *;
+
+.headSection {
+  margin-bottom: 2rem;
+}
+
+.shelveSection {
+  border-bottom: 2px solid $tertiaryColor;
+  .shelveContainer {
+    border-radius: 4px;
+    .shelve {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: $tabletMinWidth) {
+  .section {
+    @include sectionBehavior;
+  }
+}
