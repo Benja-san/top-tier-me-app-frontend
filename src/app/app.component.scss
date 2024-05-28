@@ -4,4 +4,11 @@
   max-width: $globalMaxWidth;
   margin: 0 auto;
   padding: $globalPadding;
+  min-height: calc(100vh - $headerSmartphoneHeight - $footerHeight);
+}
+
+@media screen and (min-width: $tabletMinWidth) {
+  .globalMain {
+    min-height: calc(100vh - $headerDesktopHeight - $footerHeight);
+  }
 }

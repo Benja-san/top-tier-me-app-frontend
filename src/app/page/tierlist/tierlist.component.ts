@@ -14,10 +14,10 @@ export class TierlistComponent {
   title: string = 'Vos meilleurs pinguins';
 
   raws: Raw[] = [
-    new Raw('S', 'inherit'),
-    new Raw('A', 'inherit'),
-    new Raw('B', 'inherit'),
-    new Raw('C', 'inherit'),
-    new Raw('D', 'inherit'),
+    new Raw('S', '#e36868'),
+    new Raw('A', '#ffa06b'),
+    new Raw('B', '#ffe664'),
+    new Raw('C', '#a4fd96'),
+    new Raw('D', '#95b2ff'),
   ];
 }

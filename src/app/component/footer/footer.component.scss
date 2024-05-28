@@ -1,0 +1,59 @@
+@use "../../../imports" as *;
+
+.globalFooter {
+  width: 100%;
+  padding: $globalPadding;
+  .footerNav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: $globalMaxWidth;
+    margin: 0 auto;
+    gap: 1rem;
+    .listContainer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: $grayColor;
+      font-size: $link;
+      .link {
+        transition: color $transitionDuration;
+      }
+    }
+    .networks {
+      .network {
+        a {
+          svg {
+            path {
+              fill: $primaryColor;
+              transition: fill $transitionDuration;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .globalFooter {
+    .footerNav {
+      .listContainer {
+        .link:hover {
+          color: $secondaryColor;
+        }
+      }
+      .networks {
+        .network:hover {
+          a {
+            svg {
+              path {
+                fill: $secondaryColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

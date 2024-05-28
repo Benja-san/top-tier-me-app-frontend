@@ -25,6 +25,38 @@
         display: block;
         width: 100%;
       }
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $lightColor;
+        path {
+          fill: $lightColor;
+          opacity: 0.56;
+          transition: fill $transitionDuration;
+        }
+      }
+      &.selected {
+        svg {
+          path {
+            @include optionButtonBehavior;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .raw {
+    .labelContainer {
+      .options:hover {
+        svg {
+          path {
+            @include optionButtonBehavior;
+          }
+        }
+      }
     }
   }
 }
