@@ -1,6 +1,6 @@
-<li class="raw">
-  <div class="labelContainer">
-    <h2 class="title">{{ title }}</h2>
+<li [ngStyle]="{ borderColor: raw.color }" class="raw">
+  <div [ngStyle]="{ backgroundColor: raw.color }" class="labelContainer">
+    <h2 class="title">{{ raw.title }}</h2>
     <button class="options" type="button">
       <svg
         width="150"

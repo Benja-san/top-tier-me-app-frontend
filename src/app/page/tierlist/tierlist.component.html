@@ -6,7 +6,7 @@
   <div class="shelveContainer">
     <ul class="shelve">
       @for(raw of raws; track raw) {
-      <app-raw [title]="raw.title"></app-raw>
+      <app-raw [raw]="raw"></app-raw>
       }
     </ul>
   </div>
