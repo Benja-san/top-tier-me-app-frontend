@@ -35,3 +35,8 @@ $optionsSize: 10px;
   max-width: 100%;
   margin: 0 auto;
 }
+
+@mixin optionButtonBehavior {
+  fill: $secondaryColor;
+  opacity: 1;
+}
