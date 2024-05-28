@@ -19,6 +19,44 @@
       gap: 1rem;
       color: $grayColor;
       font-size: $link;
+      .link {
+        transition: color 0.3s;
+      }
+    }
+    .networks {
+      .network {
+        a {
+          svg {
+            path {
+              fill: $primaryColor;
+              transition: fill 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .globalFooter {
+    .footerNav {
+      .listContainer {
+        .link:hover {
+          color: $secondaryColor;
+        }
+      }
+      .networks {
+        .network:hover {
+          a {
+            svg {
+              path {
+                fill: $secondaryColor;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
