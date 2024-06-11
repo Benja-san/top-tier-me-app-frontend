@@ -1,8 +1,10 @@
 @use "../../../imports" as *;
 
 .raw {
-  height: calc($rawHeight - $rawBorderHeight);
+  height: calc($rawHeight + $rawBorderHeight);
   border-bottom: $rawBorderHeight solid $rawColor1;
+  display: flex;
+  align-items: flex-start;
   .labelContainer {
     width: $rawHeight;
     height: 100%;
@@ -11,9 +13,13 @@
     justify-content: center;
     position: relative;
     background-color: $rawColor1;
+    overflow: hidden;
     .title {
-      font-size: $mediumTitle;
+      font-size: $regularTitle;
       color: $lightColor;
+      word-wrap: break-word;
+      width: 100%;
+      text-align: center;
     }
     .options {
       position: absolute;
@@ -41,6 +47,32 @@
           path {
             @include optionButtonBehavior;
           }
+        }
+      }
+    }
+  }
+  .itemsContainer {
+    width: calc(100% - $rawHeight);
+    height: 100%;
+    .editSection {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      .label {
+        font-size: $subTitle;
+        color: $grayColor;
+      }
+      .rawEditForm {
+        width: 90%;
+        max-width: 250px;
+        .titleInput {
+          width: 100%;
+          border: none;
+          border-bottom: 1px solid $darkColor;
+          background-color: transparent;
         }
       }
     }

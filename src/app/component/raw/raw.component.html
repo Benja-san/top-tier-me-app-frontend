@@ -1,7 +1,7 @@
 <li [ngStyle]="{ borderColor: raw.color }" class="raw">
   <div [ngStyle]="{ backgroundColor: raw.color }" class="labelContainer">
     <h2 class="title">{{ raw.title }}</h2>
-    <button class="options" type="button">
+    <button (click)="openEditMode()" class="options" type="button">
       <svg
         width="150"
         height="150"
@@ -23,7 +23,22 @@
       </svg>
     </button>
   </div>
+
   <div class="itemsContainer">
+    @if(isEditing) {
+    <section class="editSection">
+      <form class="rawEditForm">
+        <label class="label" for="name">Label :</label>
+        <input
+          id="name"
+          class="titleInput"
+          name="name"
+          [(ngModel)]="raw.title"
+          type="text"
+        />
+      </form>
+    </section>
+    }
     <ul class="items"></ul>
   </div>
 </li>
