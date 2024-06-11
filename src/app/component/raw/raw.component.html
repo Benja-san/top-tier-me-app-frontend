@@ -28,14 +28,54 @@
     @if(isEditing) {
     <section class="editSection">
       <form class="rawEditForm">
-        <label class="label" for="name">Label :</label>
-        <input
-          id="name"
-          class="titleInput"
-          name="name"
-          [(ngModel)]="raw.title"
-          type="text"
-        />
+        <div class="inputContainer">
+          <label class="label" for="name">Label :</label>
+          <input
+            id="name"
+            class="titleInput"
+            name="name"
+            [(ngModel)]="raw.title"
+            type="text"
+          />
+        </div>
+        <div class="inputContainer">
+          <label class="label" for="color">Color :</label>
+          <div class="colorPickerContainer">
+            <div class="contentDisplayed">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 15 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_659_1369)">
+                  <path
+                    d="M12.7413 4.35063C12.3594 4.7425 12.3638 5.37062 12.755 5.75562L12.06 6.46438L8.51625 2.98813L9.2125 2.27938C9.60188 2.66313 10.2325 2.65688 10.615 2.265L12.4388 0.446875C12.7306 0.149375 13.1163 0 13.5025 0C14.3363 0 15 0.6825 15 1.4875C15 1.88313 14.84 2.25063 14.5656 2.5325L12.7413 4.35063ZM9.9475 5.78312L10.6581 6.4775L6.6525 10.4125C5.97 11.1075 5.54437 10.5181 4.655 11.1388C4.53562 11.2213 4.40875 11.255 4.28937 11.2487C3.99187 11.235 3.73625 10.9794 3.75125 10.6512C3.75687 10.5444 3.79188 10.4275 3.86313 10.3106C4.39 9.445 3.86125 9.00375 4.52688 8.3275L8.53125 4.39125L9.24063 5.08625L7.00313 7.27875H8.42188L9.9475 5.78312ZM5.06938 9.88375L5.07312 9.88313V9.86687L5.06938 9.88375ZM9.97312 8.9025C9.99 9.0575 10 9.215 10 9.375C10 11.7875 8.03687 13.75 5.625 13.75C3.21312 13.75 1.25 11.7875 1.25 9.375C1.25 6.9625 3.21312 5 5.625 5C5.78625 5 5.945 5.01 6.10125 5.02688L7.17562 3.97125C6.68187 3.83 6.16313 3.75 5.625 3.75C2.51812 3.75 0 6.26813 0 9.375C0 12.4819 2.51812 15 5.625 15C8.73188 15 11.25 12.4819 11.25 9.375C11.25 8.84813 11.1725 8.34062 11.0369 7.8575L9.97312 8.9025Z"
+                    fill="black"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_659_1369">
+                    <rect width="15" height="15" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <div
+                class="colorElipse"
+                [ngStyle]="{ backgroundColor: raw.color }"
+              ></div>
+            </div>
+
+            <input
+              class="colorPickerInput"
+              [(ngModel)]="raw.color"
+              id="color"
+              name="color"
+              type="color"
+            />
+          </div>
+        </div>
       </form>
     </section>
     }
