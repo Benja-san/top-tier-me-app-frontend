@@ -1,5 +1,11 @@
 export class Raw {
-  constructor(private _title: string, private _color: string) {}
+  public static readonly MIN_RAW_LENGTH = 5;
+  public static readonly MAX_RAW_LENGTH = 10;
+  public static rawCurrentNumber = 0;
+
+  constructor(private _title: string, private _color: string) {
+    Raw.rawCurrentNumber++;
+  }
 
   get title(): string {
     return this._title;
