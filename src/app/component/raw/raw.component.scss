@@ -59,8 +59,7 @@
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      justify-content: space-between;
       .label {
         font-size: $subTitle;
         color: $grayColor;
@@ -68,10 +67,14 @@
       }
       .rawEditForm {
         width: 100%;
-        max-width: 400px;
+        max-width: 550px;
         display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 3rem;
+        padding: 0 1rem;
         .titleInput {
-          width: calc(100% - 40px);
+          display: block;
           border: none;
           border-bottom: 1px solid $darkColor;
           background-color: transparent;
@@ -99,6 +102,14 @@
             opacity: 0;
             width: 100%;
           }
+        }
+      }
+      .garbageButton {
+        width: 30px;
+        height: 30px;
+        svg {
+          width: 100%;
+          height: 100%;
         }
       }
     }
