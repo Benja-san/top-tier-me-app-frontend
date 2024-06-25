@@ -27,6 +27,65 @@
   }
 }
 
+.librarySection {
+  .libraryTitle {
+    margin: 1rem 0;
+  }
+  .libraryContainer {
+    .library {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      .stuff {
+        width: $stuffWidth;
+        height: $stuffWidth;
+        .stuffButton {
+          width: 100%;
+          height: 100%;
+          .pictureContainer {
+            width: 100%;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .placeholderContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            &::before {
+              content: "";
+              background-image: url("../../../assets/tierlist/placeholder-stuff-pic.png");
+              background-size: contain;
+              background-position: center center;
+              background-repeat: no-repeat;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              opacity: 0.2;
+              z-index: -1;
+            }
+            .stuffTitle {
+              font-size: $subTitle;
+              color: $darkColor;
+              text-align: center;
+              word-wrap: break-word;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: $tabletMinWidth) {
   .section {
     @include sectionBehavior;

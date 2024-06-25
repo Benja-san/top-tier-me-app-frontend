@@ -28,13 +28,15 @@ $cta: 28px;
 
 $tabletMinWidth: 768px;
 
-$sectionWidth: 300px;
+$sectionWidth: 1000px;
 
 $rawHeight: 80px;
 $rawBorderHeight: 2px;
 $optionsSize: 10px;
 
 $transitionDuration: 0.3s;
+
+$stuffWidth: 100px;
 
 @mixin sectionBehavior {
   width: $sectionWidth;

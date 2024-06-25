@@ -1,5 +1,5 @@
 <section class="section headSection">
-  <h1 class="title">{{ title }}</h1>
+  <h1 class="title">Vos meileur.e.s {{ title }}</h1>
 </section>
 
 <section class="section shelveSection">
@@ -24,4 +24,27 @@
       />
     </svg>
   </button>
+</section>
+
+<section class="section librarySection">
+  <h2 class="libraryTitle">Vos {{ title }}</h2>
+  <div class="libraryContainer">
+    <ul class="library">
+      @for(stuff of library; track stuff) {
+      <li class="stuff">
+        <button class="stuffButton" type="button">
+          @if(stuff.url){
+          <div class="pictureContainer">
+            <img src="{{ stuff.url }}" alt="{{ stuff.title }}" />
+          </div>
+          } @else {
+          <div class="placeholderContainer">
+            <h3 class="stuffTitle">{{ stuff.title }}</h3>
+          </div>
+          }
+        </button>
+      </li>
+      }
+    </ul>
+  </div>
 </section>
