@@ -37,6 +37,7 @@ $optionsSize: 10px;
 $transitionDuration: 0.3s;
 
 $stuffWidth: 100px;
+$selectedStuffWidth: calc($stuffWidth * 90 / 100);
 
 @mixin sectionBehavior {
   width: $sectionWidth;

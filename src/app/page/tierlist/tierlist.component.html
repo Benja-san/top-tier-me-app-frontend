@@ -25,6 +25,39 @@
     </svg>
   </button>
 </section>
+@if(selectedStuff) {
+<section class="section stuffSelectedSection">
+  <div class="stuffContainer">
+    <button class="garbageButton" type="button">
+      <svg
+        width="15"
+        height="15"
+        viewBox="0 0 15 15"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1.875 3.75V15H13.125V3.75H1.875ZM13.75 1.25V2.5H1.25V1.25H4.81938C5.38188 1.25 5.83875 0.563125 5.83875 0H9.16062C9.16062 0.563125 9.6175 1.25 10.18 1.25H13.75Z"
+          fill="black"
+        />
+      </svg>
+    </button>
+    <h3 class="stuffTitle">{{ selectedStuff.title }}</h3>
+    <div class="pictureContainer">
+      <img src="{{ selectedStuff.url }}" alt="{{ selectedStuff.title }}" />
+    </div>
+  </div>
+  <div class="rawsContainer">
+    <ul class="buttonsContainer">
+      @for(raw of raws; track raw) {
+      <li [ngStyle]="{ backgroundColor: raw.color }" class="buttonList">
+        <button class="rawButton" type="button"></button>
+      </li>
+      }
+    </ul>
+  </div>
+</section>
+}
 
 <section class="section librarySection">
   <h2 class="libraryTitle">Vos {{ title }}</h2>
