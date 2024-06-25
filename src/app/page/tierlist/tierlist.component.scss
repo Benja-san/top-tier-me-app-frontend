@@ -1,5 +1,8 @@
 @use "../../../imports" as *;
 
+$garbageButtonWidth: 1rem;
+$rawButtonWidth: 45px;
+
 .headSection {
   margin-bottom: 2rem;
 }
@@ -23,6 +26,61 @@
     svg {
       width: 100%;
       height: 100%;
+    }
+  }
+}
+
+.stuffSelectedSection {
+  border-bottom: 2px solid $tertiaryColor;
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  .stuffContainer {
+    position: relative;
+    min-width: 150px;
+    .garbageButton {
+      position: absolute;
+      width: $garbageButtonWidth;
+      height: $garbageButtonWidth;
+      left: calc(0px - $garbageButtonWidth - 0.5rem);
+      top: -3px;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .stuffTitle {
+      font-size: $subTitle;
+      text-align: center;
+    }
+    .pictureContainer {
+      width: $selectedStuffWidth;
+      height: $selectedStuffWidth;
+      margin: 0.5rem auto 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .rawsContainer {
+    .buttonsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      .buttonList {
+        width: $rawButtonWidth;
+        height: $rawButtonWidth;
+        border-radius: 2px;
+        .rawButton {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 }
