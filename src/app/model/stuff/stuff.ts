@@ -1,4 +1,6 @@
 export class Stuff {
+  public currentRaw?: number;
+
   constructor(private _title: string, private _url: string) {}
 
   get title(): string {

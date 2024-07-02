@@ -28,7 +28,11 @@
 @if(selectedStuff) {
 <section class="section stuffSelectedSection">
   <div class="stuffContainer">
-    <button class="garbageButton" type="button">
+    <button
+      (click)="removeStuff(selectedStuff)"
+      class="garbageButton"
+      type="button"
+    >
       <svg
         width="15"
         height="15"
@@ -51,7 +55,11 @@
     <ul class="buttonsContainer">
       @for(raw of raws; track raw) {
       <li [ngStyle]="{ backgroundColor: raw.color }" class="buttonList">
-        <button class="rawButton" type="button"></button>
+        <button
+          (click)="attributeRaw(selectedStuff, raw, $index)"
+          class="rawButton"
+          type="button"
+        ></button>
       </li>
       }
     </ul>

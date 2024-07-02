@@ -93,6 +93,18 @@
       </button>
     </section>
     }
-    <ul class="items"></ul>
+    <ul class="items">
+      @for(stuff of raw.stuffs; track stuff){
+      <li class="stuff">
+        @if(stuff.url){
+        <img src="{{ stuff.url }}" alt="{{ stuff.title }}" />
+        } @else {
+        <div class="titleContainer">
+          <h3>{{ stuff.title }}</h3>
+        </div>
+        }
+      </li>
+      }
+    </ul>
   </div>
 </li>
