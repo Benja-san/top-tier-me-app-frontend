@@ -63,4 +63,24 @@ export class TierlistComponent {
   selectStuff(stuff: Stuff) {
     this.selectedStuff = stuff;
   }
+
+  removeStuff(stuff: Stuff) {
+    if (stuff.currentRaw !== undefined) {
+      this.raws[stuff.currentRaw].stuffs = this.raws[
+        stuff.currentRaw
+      ].stuffs.filter((s) => s !== stuff);
+    }
+  }
+
+  attributeRaw(stuff: Stuff, raw: Raw, index: number) {
+    if (!raw.stuffs.includes(stuff)) {
+      raw.stuffs.push(stuff);
+    }
+
+    if (stuff.currentRaw !== undefined && index !== stuff.currentRaw) {
+      this.removeStuff(stuff);
+    }
+
+    stuff.currentRaw = index;
+  }
 }

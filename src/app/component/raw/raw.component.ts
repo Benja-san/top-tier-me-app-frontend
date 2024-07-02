@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Raw } from '../../model/raw/raw';
 import { NgStyle } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Stuff } from '../../model/stuff/stuff';
 
 @Component({
   selector: 'app-raw',
