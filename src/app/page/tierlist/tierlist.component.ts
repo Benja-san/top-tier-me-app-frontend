@@ -60,5 +60,6 @@ export class TierlistComponent {
       "Batman's the Penguin",
       'https://www.urban-comics.com/wp-content/uploads/2021/06/pingouin3.jpg'
     ),
+    new Stuff('Any penguin', ''),
   ];
 }
