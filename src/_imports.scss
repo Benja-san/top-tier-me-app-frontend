@@ -1,6 +1,10 @@
 $globalMaxWidth: 1200px;
 $globalPadding: 2rem;
 
+$headerSmartphoneHeight: 119px;
+$headerDesktopHeight: 169px;
+$footerHeight: 104px;
+
 $primaryColor: #293040;
 $secondaryColor: #d5b263;
 $tertiaryColor: #c9ad8b;
@@ -13,10 +17,36 @@ $rawColor5: #95b2ff;
 
 $darkColor: #0d0c0c;
 $lightColor: #fbfafa;
-$grayColor: #e0e0e0;
+$grayColor: #959595;
+$translucidGrayColor: rgba(149, 149, 149, 0.4);
 
 $bigtitle: 2rem;
 $mediumTitle: 1.5rem;
 $regularTitle: 1rem;
 $subTitle: 12px;
 $link: 14px;
+$cta: 28px;
+
+$tabletMinWidth: 768px;
+
+$sectionWidth: 1000px;
+
+$rawHeight: 80px;
+$rawBorderHeight: 2px;
+$optionsSize: 10px;
+
+$transitionDuration: 0.3s;
+
+$stuffWidth: 100px;
+$selectedStuffWidth: calc($stuffWidth * 90 / 100);
+
+@mixin sectionBehavior {
+  width: $sectionWidth;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+@mixin optionButtonBehavior {
+  fill: $secondaryColor;
+  opacity: 1;
+}

@@ -1,0 +1,36 @@
+@use "../../../imports" as *;
+
+.presentation {
+  @include sectionBehavior;
+  .headTitle {
+    text-align: center;
+    font-size: $bigtitle;
+    font-family: Metamorphous;
+  }
+  .pictureContainer {
+    margin: 1rem auto 2rem;
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .ctaPlay {
+    display: block;
+    margin-top: 2rem;
+    font-size: $cta;
+    background-color: $primaryColor;
+    color: $lightColor;
+    padding: 1rem 3rem;
+    text-align: center;
+    border-radius: 25px;
+    transition: background-color $transitionDuration;
+  }
+}
+
+@media (hover: hover) {
+  .presentation {
+    .ctaPlay:hover {
+      background-color: $secondaryColor;
+    }
+  }
+}

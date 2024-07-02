@@ -1,0 +1,168 @@
+@use "../../../imports" as *;
+
+.raw {
+  height: calc($rawHeight + $rawBorderHeight);
+  border-bottom: $rawBorderHeight solid $rawColor1;
+  display: flex;
+  align-items: flex-start;
+  .labelContainer {
+    width: $rawHeight;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: $rawColor1;
+    overflow: hidden;
+    .title {
+      font-size: $regularTitle;
+      color: $lightColor;
+      word-wrap: break-word;
+      width: 100%;
+      text-align: center;
+    }
+    .options {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      width: $optionsSize;
+      height: $optionsSize;
+      img {
+        display: block;
+        width: 100%;
+      }
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $lightColor;
+        path {
+          fill: $lightColor;
+          opacity: 0.56;
+          transition: fill $transitionDuration;
+        }
+      }
+      &.selected {
+        svg {
+          path {
+            @include optionButtonBehavior;
+          }
+        }
+      }
+    }
+  }
+  .itemsContainer {
+    width: calc(100% - $rawHeight);
+    height: 100%;
+    .items {
+      overflow-x: auto;
+      overflow-y: hidden;
+      display: flex;
+      gap: 1rem;
+      max-width: 100%;
+      height: 100%;
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      /* Track */
+      &::-webkit-scrollbar-track {
+        background: $lightColor;
+      }
+
+      /* Handle */
+      &::-webkit-scrollbar-thumb {
+        background: $translucidGrayColor;
+        border-radius: 4px;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollbar-thumb:hover {
+        background: $grayColor;
+      }
+      .stuff {
+        width: $stuffWidth;
+        height: 100%;
+        padding: 0.5rem 0;
+        img {
+          height: 80%;
+          margin-top: 20%;
+          object-fit: contain;
+        }
+      }
+    }
+    .editSection {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .label {
+        font-size: $subTitle;
+        color: $grayColor;
+        display: block;
+      }
+      .rawEditForm {
+        width: 100%;
+        max-width: 550px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 3rem;
+        padding: 0 1rem;
+        .titleInput {
+          display: block;
+          border: none;
+          border-bottom: 1px solid $darkColor;
+          background-color: transparent;
+        }
+        .colorPickerContainer {
+          position: relative;
+          width: 40px;
+          .contentDisplayed {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            .colorElipse {
+              width: 15px;
+              height: 15px;
+              border-radius: 50%;
+            }
+          }
+          .colorPickerInput {
+            opacity: 0;
+            width: 100%;
+          }
+        }
+      }
+      .garbageButton {
+        width: 30px;
+        height: 30px;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .raw {
+    .labelContainer {
+      .options:hover {
+        svg {
+          path {
+            @include optionButtonBehavior;
+          }
+        }
+      }
+    }
+  }
+}
