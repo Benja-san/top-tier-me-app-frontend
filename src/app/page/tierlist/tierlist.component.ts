@@ -14,10 +14,7 @@ import { Stuff } from '../../model/stuff/stuff';
 export class TierlistComponent {
   title: string = 'pinguins';
 
-  selectedStuff?: Stuff = new Stuff(
-    'Animal Crossing Penguin',
-    'https://w7.pngwing.com/pngs/673/433/png-transparent-penguin-animal-crossing-pocket-camp-duck-video-games-bird-penguin-game-animals-animal.png'
-  );
+  selectedStuff?: Stuff;
 
   raws: Raw[] = [
     new Raw('S', '#e36868'),
@@ -62,4 +59,8 @@ export class TierlistComponent {
     ),
     new Stuff('Any penguin', ''),
   ];
+
+  selectStuff(stuff: Stuff) {
+    this.selectedStuff = stuff;
+  }
 }

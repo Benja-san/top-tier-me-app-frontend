@@ -65,7 +65,7 @@
     <ul class="library">
       @for(stuff of library; track stuff) {
       <li class="stuff">
-        <button class="stuffButton" type="button">
+        <button (click)="selectStuff(stuff)" class="stuffButton" type="button">
           @if(stuff.url){
           <div class="pictureContainer">
             <img src="{{ stuff.url }}" alt="{{ stuff.title }}" />
